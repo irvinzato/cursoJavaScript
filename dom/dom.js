@@ -18,6 +18,7 @@ DOM - HTML - HEAD - TITLE
 - Comentarios y otros: los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos HTML generan nodos
 
 --- DOCUMENT document. - METODOS DE SELECCION DE ELEMENTO ---
+SE APLICAN A LOS DOCUMENTOS ! .document
 - getElementById() - selecciona un elemento por ID
 let parrafo = document.getElementById("parrafo")
 document.write(parrafo); //segun la etiqueta del HTML nos dice objeto de HTML y otros con el nombre
@@ -36,6 +37,7 @@ Son objetos !
 */
 
 /* --- METODOS PARA DEFINIR, OBTENER Y ELIMINAR ATRIBUTOS ---
+SE APLICAN A LOS ELEMENTOS ! element.
 setAttribute() - Modifica el valor de un atributo e incluso los puede crear si en HTML no tiene
 let seleccionRango = document.querySelector(".inputRange");
 seleccionRango.setAttribute("type","color");
@@ -63,18 +65,33 @@ let titulo = document.querySelector(".titulo");
 
 titulo.setAttribute("contentEditable", "true");
 
-/* --- ATRIBUTOS DE INPUTS DESDE JS---
-className
-value
-type
-accept
-form
-winlength
-placeholder
-required
+/* --- ATRIBUTOS DE INPUTS DESDE JS 8:18:00---
+className - muestra la clase del input
+value - muestra el valor del input SE USA MUCHO
+type - muestra el tipo
+accept - para los type file acepten solo ciertos archivos
+form - importante que este dentro del form input text y submit o si esta fuera submit deberia tener el form="id del formulario que pertenece" para poder enviar
+minlength - minima cantidad de caracteres que debe tener un input, tambien funciona con setAtrtibute("minlength","4")
+placeholder - lo que tiene dentro el input
+required - permite decir si es un campo REQUERIDO o no
  */
 
-/* --- ATRIBUTO STYLE ---
-usos y ejemplos
-propiedades Camel Case
+const input = document.querySelector(".input-file");
+
+input.accept = "image/png";
+
+const inputFormText = document.querySelector(".input-form-text1");
+const inputFormObligatorio = document.querySelector(".input-form-text2");
+
+inputFormText.minLength = "4";
+inputFormObligatorio.required = "required";
+
+
+/* --- ATRIBUTO STYLE 8:29:00---
+usos y ejemplos para trabajar con estilos en JS
+propiedades Camel Case - Esto significa usar mayusculas en lugar de "-" ejemplo background-color seria backgroundColor
  */
+
+const tituloh1 = document.querySelector(".tituloh1");
+
+tituloh1.style.color = "#bbb";
