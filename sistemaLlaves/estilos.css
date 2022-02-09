@@ -1,0 +1,78 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;  /*Que se tiren para abajo*/
+    justify-content: center;
+}
+
+.flex-item {
+    flex-grow: 1;
+    /*flex-basis: 300px; Investigar que hacen*/
+    margin: 20px;
+    max-width: 400px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 0 20px;
+}
+
+.flex-item:hover {
+    border-color:  rgb(17, 121, 17);
+    box-shadow: 0px 0px 22px rgb(207, 111, 1);
+}
+
+
+.flex-item:active {
+    border-color: rgb(121, 17, 17);
+    box-shadow: 0px 0px 22px rgb(218, 3, 3);
+}
+
+.flex-item:focus {                      /*REVISAR ESTA PROPIEDAD*/
+    border: 3px solid rgb(121, 17, 17);
+    box-shadow: 0px 0px 22px rgb(218, 3, 3);
+}
+
+h2,h3{
+    margin: 0px;
+    color: rgb(124, 0, 0);
+}
+
+h3 {
+    color: rgb(75, 75, 75);
+}
+
+p b {
+    color: rgb(7, 195, 0);
+}
+
+img {
+    width: 300px;
+    margin: 30px;
+}
+
+form {
+    text-align: center;
+    padding: 15px;
+}
+
+form [type="submit"] {
+    border: none;
+    background: #ebe;
+    padding: 10px 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*AGREGANDO PARA MEJORAR EL SISTEMA*/
+
+.resultado {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.resultado h2 {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(60, 255, 0);
+}
